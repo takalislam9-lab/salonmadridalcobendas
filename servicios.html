@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicios — Salón Madrid · Alcobendas</title>
+<meta name="description" content="Servicios de Salón Madrid en Alcobendas.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header id="header" class="scrolled">
+  <a href="index.html" class="logo" aria-label="Salón Madrid, inicio"><span class="logo-mark">M</span><span class="logo-text"><span class="script">Salón Madrid</span><small>hair beauty</small></span></a>
+  <nav id="nav" aria-label="Navegación principal"><ul><li><a href="index.html#inicio">Inicio</a></li><li><a href="servicios.html">Servicios</a></li><li><a href="index.html#galeria">Galería</a></li><li><a href="index.html#opiniones">Opiniones</a></li><li><a href="index.html#contacto">Contacto</a></li></ul></nav><button class="nav-toggle" id="navToggle" aria-label="Abrir menú">☰</button>
+</header>
+
+<div class="page-hero">
+  <span class="eyebrow">Nuestro catálogo</span>
+  <h1>Servicios</h1>
+  <p>Organizados por categoría. Toca una tarjeta para ver los servicios y pedir precio o cita.</p>
+</div>
+
+<div class="tabs">
+  <button class="tab-btn active" data-tab="corte">Corte</button>
+  <button class="tab-btn" data-tab="mechas">Mechas</button>
+  <button class="tab-btn" data-tab="cuidado">Asesoramiento y cuidado</button>
+  
+</div>
+
+<div class="tab-panel active" id="corte">
+  <div class="tab-intro"><span class="script">Estilo</span><h2>Corte y cambio de look</h2><p>Cortamos escuchando lo que quieres y te aconsejamos lo que mejor te queda.</p></div>
+  <div class="cat-grid single">
+    <div class="cat-card" onclick="openModal('corte')"><img src="u_color.jpg" alt="Corte" loading="lazy"><div class="cat-card-text"><h3>Corte</h3><span>Ver servicios</span></div></div>
+  </div>
+</div>
+
+<div class="tab-panel" id="mechas">
+  <div class="tab-intro"><span class="script">Color</span><h2>Mechas</h2><p>Luz y vida para tu melena.</p></div>
+  <div class="cat-grid single">
+    <div class="cat-card" onclick="openModal('mechas')"><img src="u_balayage.jpg" alt="Mechas" loading="lazy"><div class="cat-card-text"><h3>Mechas</h3><span>Ver servicios</span></div></div>
+  </div>
+</div>
+
+<div class="tab-panel" id="cuidado">
+  <div class="tab-intro"><span class="script">Cuidado</span><h2>Asesoramiento y cuidado del cabello</h2><p>Un pelo sano es la base de todo.</p></div>
+  <div class="cat-grid single">
+    <div class="cat-card" onclick="openModal('cuidado')"><img src="u_tinte.jpg" alt="Asesoramiento y cuidado" loading="lazy"><div class="cat-card-text"><h3>Asesoramiento y cuidado</h3><span>Ver servicios</span></div></div>
+  </div>
+</div>
+
+
+<p class="services-note">¿Quieres saber precios o tienes dudas? Escríbenos por WhatsApp al <a href="https://wa.me/34614155884" target="_blank" rel="noopener" style="color:var(--red)">614 15 58 84</a> y te asesoramos sin compromiso.</p>
+
+<div class="modal-overlay" id="modal-corte"><div class="modal">
+  <button class="modal-close" onclick="closeModal('corte')" aria-label="Cerrar">×</button>
+  <h3>Corte</h3><p class="modal-sub">Con estilo y a tu medida</p>
+  <div class="svc-row"><div><div class="svc-name">Corte de pelo</div><span class="svc-desc">Cortes con estilo, para todas las edades y modas.</span></div><div class="svc-price">Consultar</div></div>
+  <div class="svc-row"><div><div class="svc-name">Corte a navaja</div><span class="svc-desc">Movimiento y textura con un acabado fenomenal.</span></div><div class="svc-price">Consultar</div></div>
+  <div class="svc-row"><div><div class="svc-name">Cambio de look</div><span class="svc-desc">Nueva forma para tu pelo cuando te apetece un cambio.</span></div><div class="svc-price">Consultar</div></div>
+  <a class="modal-cta alt" href="https://wa.me/34614155884?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20corte" target="_blank" rel="noopener">Pedir cita por WhatsApp</a>
+</div></div>
+
+<div class="modal-overlay" id="modal-mechas"><div class="modal">
+  <button class="modal-close" onclick="closeModal('mechas')" aria-label="Cerrar">×</button>
+  <h3>Mechas</h3><p class="modal-sub">Luz a tu medida</p>
+  <div class="svc-row"><div><div class="svc-name">Mechas</div><span class="svc-desc">Te asesoramos sobre el tono que mejor va contigo.</span></div><div class="svc-price">Consultar</div></div>
+  <a class="modal-cta alt" href="https://wa.me/34614155884?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20mechas" target="_blank" rel="noopener">Pedir cita por WhatsApp</a>
+</div></div>
+
+<div class="modal-overlay" id="modal-cuidado"><div class="modal">
+  <button class="modal-close" onclick="closeModal('cuidado')" aria-label="Cerrar">×</button>
+  <h3>Asesoramiento y cuidado</h3><p class="modal-sub">Pelo sano y bonito</p>
+  <div class="svc-row"><div><div class="svc-name">Asesoramiento personalizado</div><span class="svc-desc">Te aconsejamos según tu tipo de cabello.</span></div><div class="svc-price">Consultar</div></div>
+  <div class="svc-row"><div><div class="svc-name">Cuidado de la salud del cabello</div><span class="svc-desc">Trabajamos cuidando tu pelo en cada servicio.</span></div><div class="svc-price">Consultar</div></div>
+  <a class="modal-cta alt" href="https://wa.me/34614155884?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20asesoramiento%20y%20cuidado" target="_blank" rel="noopener">Pedir cita por WhatsApp</a>
+</div></div>
+
+
+<footer>
+  <div class="footer-bottom" style="margin-top:0">
+    <span>Propuesta de diseño para Salón Madrid - demo, no es el sitio web oficial del negocio.</span>
+    <span><a href="aviso-legal.html">Aviso Legal</a> &middot; <a href="politica-privacidad.html">Privacidad</a> &middot; <a href="politica-cookies.html">Cookies</a></span>
+  </div>
+</footer>
+
+<div id="cookie-banner" class="cookie-banner"><p>Esta web utiliza cookies de terceros (Google Maps) para ofrecerte la mejor experiencia. Puedes aceptar su uso o rechazarlas. <a href="politica-cookies.html">Más información</a></p><div class="cookie-actions"><button onclick="setCookieChoice('rejected')" class="ck-reject">Rechazar</button><button onclick="setCookieChoice('accepted')" class="ck-accept">Aceptar</button></div></div>
+<div class="social-fabs"><a class="wa-fab" href="https://wa.me/34614155884?text=Hola%2C%20quiero%20pedir%20cita%20en%20Sal%C3%B3n%20Madrid" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c2.6 1 2.6.7 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3ZM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8Zm8.4-18.3A11.8 11.8 0 0 0 1.8 17.7L.2 23.8l6.3-1.6a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.4 3.5Z"/></svg></a></div>
+<script src="main.js"></script>
+</body>
+</html>
